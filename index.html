@@ -17,23 +17,16 @@
 
         <!-- Todo Input -->
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Todo">
+            <input id="todo-input" type="text" class="form-control" placeholder="Todo">
             <span class="input-group-btn">
                 <button class="btn btn-default" onclick="addTodo()">Add</button>
             </span>
         </div>
 
         <!-- Todo List  -->
-        <ul class="list-group todo-list">
-            <li class="list-group-item todo-item">
-                <span class="todo-item-text">Todo Text</span>
-                <span class="controls">
-                    <button class="btn btn-default todo-item-delete" onclick="showEditDialog()">Edit</button>
-                    <button class="btn btn-default todo-item-delete">Delete</button>
-                </span>
-            </li>
-        </ul>
+        <ul class="list-group todo-list"></ul>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script src="./app.js"></script>
 </body>
 
