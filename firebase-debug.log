@@ -1,0 +1,28 @@
+[debug] [2017-08-03T05:28:22.402Z] ----------------------------------------------------------------------
+[debug] [2017-08-03T05:28:22.405Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-08-03T05:28:22.405Z] CLI Version:  3.9.1
+[debug] [2017-08-03T05:28:22.405Z] Platform:     linux
+[debug] [2017-08-03T05:28:22.405Z] Node Version: v8.1.3
+[debug] [2017-08-03T05:28:22.405Z] Time:         Thu Aug 03 2017 10:28:22 GMT+0500 (PKT)
+[debug] [2017-08-03T05:28:22.405Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-03T05:28:22.418Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-03T05:28:22.418Z] > authorizing via signed-in user
+[debug] [2017-08-03T05:28:22.420Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fir-tutorial-d7927  
+ Thu Aug 03 2017 10:28:22 GMT+0500 (PKT)
+[debug] [2017-08-03T05:28:23.687Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-03T05:28:23.690Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fir-tutorial-d7927/tokens  
+ Thu Aug 03 2017 10:28:23 GMT+0500 (PKT)
+[debug] [2017-08-03T05:28:24.704Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/farooq/firebase-tutorial'...
+[info] 
+[debug] [2017-08-03T05:28:24.709Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fir-tutorial-d7927  
+ Thu Aug 03 2017 10:28:24 GMT+0500 (PKT)
+[debug] [2017-08-03T05:28:26.282Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-03T05:28:26.283Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/499144204773/clients/_:getWebAppConfig  
+ Thu Aug 03 2017 10:28:26 GMT+0500 (PKT)
+[debug] [2017-08-03T05:28:27.385Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+

@@ -1,0 +1,19 @@
+body{
+    margin: 20px;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+.todo-list{
+    margin-top: 10px;
+}
+.todo-list .todo-item{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
