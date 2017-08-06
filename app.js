@@ -13,7 +13,7 @@
  */ 
 
 
-// Initialize Firebase
+// Initialize Firebase, add the configs from your firebase project
 var config = {
     apiKey: "API_KEY",
     authDomain: "<YOUR_FIREBASE_PROJECT>.firebaseapp.com",
