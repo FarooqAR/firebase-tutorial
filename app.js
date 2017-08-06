@@ -63,7 +63,7 @@ function renderTodo(todo){
                             '</span>' +
                         '</li>';
 
-    todoList.insertAdjacentHTML('beforeend', todoTemplate);
+    todoList.insertAdjacentHTML('beforeend', todoTemplate); // learn it from https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
         
 }
 
