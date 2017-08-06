@@ -1,3 +1,18 @@
+/*  Resources to learn firebase.
+ *  Official Documentation:
+ *  Database : https://firebase.google.com/docs/database/web/start
+ *  Authentication : https://firebase.google.com/docs/auth/web/start  
+ *  
+ *  Video Tutorials: 
+ *  Database (includes some advanced js)
+ *       Part 1: https://www.youtube.com/watch?v=noB98K6A0TY
+ *       Part 2: https://www.youtube.com/watch?v=dBscwaqNPuk
+ *  Authentication: (includes some advanced js)
+ *       Full Part: https://www.youtube.com/watch?v=-OKrloDzGpU
+ * 
+ */ 
+
+
 // Initialize Firebase
 var config = {
     apiKey: "API_KEY",
@@ -8,8 +23,8 @@ var config = {
     messagingSenderId: "<OPTIONAL>"
 };
 
-var app = firebase.initializeApp(config);
-var db = app.database();
+var app = firebase.initializeApp(config); // get the firebase reference for our app
+var db = app.database(); 
 var rootRef = db.ref();
 
 var input = document.querySelector('#todo-input');
@@ -18,12 +33,10 @@ var todoList = document.querySelector('.todo-list');
 function addTodo() {
     var todo = input.value;
     if(todo !== ''){
-        // push to firebase
         var todoKey = rootRef.push().key; // get unique key
         rootRef.child(todoKey).set(todo);
-        // empty the input
-        input.value = '';
-        input.focus();
+        input.value = ''; // empty the input
+        input.focus(); // put the cursor again in the input
     }
 }
 
@@ -36,8 +49,8 @@ rootRef.on('child_removed', function(data){
 });
 
 rootRef.on('child_changed', function(data){
-    var itemToDelete = document.querySelector('.' + data.key);
-    var itemText = itemToDelete.firstElementChild;
+    var itemToChange = document.querySelector('.' + data.key);
+    var itemText = itemToChange.firstElementChild; // the firstElementChild will the span element that contains todo text 
     itemText.innerHTML = data.val();
 });
 
@@ -59,7 +72,8 @@ function deleteTodo(key){
 }
 function editTodo(key, value) {
     var newValue = prompt('Edit todo', value);
-    if(newValue !== '' && newValue !== null){
+    
+    if(newValue !== '' && newValue !== null){ // check if the value is not empty
         var updates = {};
         updates[key] = newValue; 
         rootRef.update(updates);
