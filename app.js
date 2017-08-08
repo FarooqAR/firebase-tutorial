@@ -27,7 +27,7 @@ var app = firebase.initializeApp(config); // get the firebase reference for our 
 var db = app.database(); 
 var rootRef = db.ref();
 
-var input = document.querySelector('#todo-input');
+var input = document.querySelector('#todo-input'); // learn it from https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 var todoList = document.querySelector('.todo-list');
 
 function addTodo() {
@@ -50,7 +50,7 @@ rootRef.on('child_removed', function(data){
 
 rootRef.on('child_changed', function(data){
     var itemToChange = document.querySelector('.' + data.key);
-    var itemText = itemToChange.firstElementChild; // the firstElementChild will the span element that contains todo text 
+    var itemText = itemToChange.firstElementChild; // the firstElementChild will be the span element that contains todo text 
     itemText.innerHTML = data.val();
 });
 
